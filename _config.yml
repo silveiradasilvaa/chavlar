@@ -6,11 +6,11 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: 'Product Camp 2019'
+title: 'Chaveiro Chavlar 24h - Chaveiro em Florianópolis, São José, Palhoça e Biguaçu'
 description: >
-  'A maior conferência de Product Management da América Latina. Conteúdo alto nível e qualificado.'
+  'Somos um dos maiores chaveiros 24h da Grande Florianópolis. Atuamos com fechaduras tetra, cadeados, kit de segurança e controles para portões e alarmes'
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://www.productcamp.com.br" # the base hostname & protocol for your site
+url: "http://www.chavlar.com.br/" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
