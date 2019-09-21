@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+
+@font-face {
+    font-family: 'eina';
+    src: url('../fonts/eina01-light-webfont.woff2') format('woff2'),
+         url('../fonts/eina01-light-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'eina';
+    src: url('../fonts/eina01-bold-webfont.woff2') format('woff2'),
+         url('../fonts/eina01-bold-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'eina';
+    src: url('../fonts/eina01-regular-webfont.woff2') format('woff2'),
+         url('../fonts/eina01-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:180%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: $vunity * 2;
+    overflow-x: hidden;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'eina';
+  font-weight: 100;
+  color: #190D21;
+}
+
+h2{
+  font-size: 36px;
+  font-weight: 900;
+  @include media-breakpoint-down(sm) {
+    font-size: 22px;
+  }
+}
+
+
+* {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.btn{
+  font-size: $vunity * 2;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: $vunity * 2 $vunity * 4;
+}
+
+.nav-chavlar{
+  width: 100%;
+  position: fixed;
+  padding: 15px 0;
+  z-index: 2000;
+  transition: all 0.2s;
+  .nav-chavlar-content{
+    display: flex;
+    justify-content: space-between;
+    .nav-left{
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      .a-brand{
+        figure{
+          max-width: 260px;
+          display: flex;
+          svg{
+            .productcamp{
+              transition: all 0.2s;
+            }
+          }
+        }
+      }
+    }
+    .nav-right{
+      .nav-link{
+        color: #fff;
+        font-weight: 600;
+        padding: 0.5rem 0.3rem;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      .itens-menu{
+        display: none;
+        &.opened{
+          display: block;
+        }
+        ul{
+          display: block;
+          li{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  &.open{
+    background: #fff;
+    padding-bottom: 20px;
+    .nav-chavlar-content{
+      .nav-left{
+        .a-brand{
+          figure{
+            // max-width: 260px;
+            display: flex;
+            svg{
+              .chavlar{
+                path{
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+      .nav-right{
+        .nav-link{
+          color: $gray-900;
+        }
+      }
+    }
+  }
+  &.scrolling{
+    background: #fff;
+    transition: all 0.2s;
+    border-bottom: 1px solid $gray-300;
+    .nav-chavlar-content{
+      .nav-left{
+        .a-brand{
+          figure{
+            // max-width: 260px;
+            display: flex;
+            svg{
+              .chavlar{
+                path{
+                  fill: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+      .nav-right{
+        .nav-link{
+          color: $gray-900;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    padding: 5px 0;
+    .nav-chavlar-content{
+      .nav-left{
+        .a-brand{
+          figure{
+            max-width: 110px;
+          }
+        }
+      }
+    }
+  }
+  .itens-menu-mobile{
+    text-align: center;
+    display: none;
+    .nav-link{
+      color: $gray-900;
+    }
+    &.open{
+      display: block;
+    }
+  }
+}
+
+.form-control{
+  border: 1px solid $gray-300;
+  background: $gray-200;
+  font-size: $vunity * 2;
+  padding: $vunity * 2;
+}
+
+.menu-mobile {
+  text-align: right;
+  display: inline-block;
+  float: right;
+  // margin-top: 15px;
+  .hamburger {
+    display:inline-block;
+    position:relative;
+    height:47px;
+    width:50px;
+    cursor:pointer;
+    .container-hambuger {
+      top:15px;
+      position:absolute;
+      left:15px
+    }
+    span {
+      width:20px;
+      height:3px;
+      background:#fff;
+      display:block;
+      border-radius:2px;
+      position:absolute;
+      transition:all 0.2s
+    }
+
+    &.open span {
+      background:$primary;
+    }
+
+    span:nth-child(1) {
+      top:0px
+    }
+    span:nth-child(2) {
+      top:7px
+    }
+    span:nth-child(3) {
+      top:14px
+    }
+    span:nth-child(4) {
+      top:7px
+    }
+    &.open span {
+      transition:all 0.2s
+    }
+    &.open span:nth-child(1) {
+      top:7px;
+      opacity:0
+    }
+    &.open span:nth-child(2) {
+      transform:rotate(45deg)
+    }
+    &.open span:nth-child(3) {
+      top:7px;
+      opacity:0
+    }
+    &.open span:nth-child(4) {
+      transform:rotate(-45deg)
+    }
+  }
+}
+
+.nav-chavlar.scrolling .menu-mobile .hamburger span {
+  background:$primary;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.btn-outline-primary{
+  &.white{
+    color: #fff;
+  }
+}
+
+.showcase{
+  height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  background: url('/img/alexandre-thomaz-chavlar.jpg');
+  background-size: cover;
+  h1{
+    font-family: 'eina';
+    font-weight: 100;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 900;
+    color: #fff;
+    max-width: 518px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  p{
+    color: #7E7B84;
+    max-width: 390px;
+    font-size: 16px;
+    line-height: 160%;
+  }
+  @include media-breakpoint-down(md) {
+    height: 100%;
+    padding: 110px 0 60px 0px;
+    h1{
+      font-size: 26px;
+    }
+  }
+}
+
+.color-pink{
+  color: $secondary;
+}
+
+.about{
+  padding: 100px 0;
+  background: #ffffff; /* Old browsers */
+  h2{
+    margin-bottom: 40px;
+  }
+  @include media-breakpoint-down(sm) {
+    p{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.request-service{
+  background: $primary;
+  padding: 100px 0;
+  text-align: center;
+  a{
+    text-decoration: none;
+  }
+  h2{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .request-service-content{
+    margin-bottom: 40px;
+    h3{
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      font-size: 28px;
+      text-align: center;
+      small{
+        font-size: 14px;
+        color: $yellow;
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .btn{
+    margin-top: 40px;
+    img{
+      position: relative;
+      top: 4px;
+      margin-right: 10px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .request-service-content{
+      h3{
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.informations{
+  background: $primary;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  .informations-content{
+    height: 524px;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    h2{
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p{
+      margin: 0 auto;
+      color: #fff;
+      span{
+        display: block;
+      }
+    }
+    .mail-contact{
+      color: #fff;
+    }
+  }
+  .map{
+    width: 50%;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    .gmap-container{
+      overflow: hidden;
+      position: relative;
+      height: 524px;
+      width: 100%;
+      #gmap_canvas{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgb(229, 227, 223);
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    .informations-content{
+      height: 380px;
+      margin-bottom: 300px;
+    }
+    .address{
+      height: 360px;
+      display: flex;
+      align-items:center;
+      margin-bottom: 460px;
+    }
+    .map{
+      width: 100%;
+      top: 380px;
+      .gmap-container{
+        overflow: hidden;
+        position: relative;
+        height: 300px;
+      }
+    }
+  }
+}
+
+.btn{
+  white-space: normal;
+}

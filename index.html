@@ -1,0 +1,84 @@
+---
+layout: default
+---
+<section class="showcase">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Chaveiro há 21 anos com serviço diferenciado e atendimento 24 horas</h1>
+        <!-- <h1>Chaveiro há 21 anos com uma careca de sucesso</h1> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="request-service" id="solicite-servico">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2>Solicite um serviço agora</h2>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="request-service-content">
+          <a href="tel:48999715087">
+            <h3><small>TIM | Plantão 24h</small>(48) 99971-5087</h3>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="request-service-content">
+          <a href="tel:48984902021">
+            <h3><small>Oi | Plantão 24h</small>(48) 98490-2021</h3>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="request-service-content">
+          <a href="tel:4832465087">
+            <h3><small>Fixo | Horário comercial</small>(48) 3246-5087</h3>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <a href="https://api.whatsapp.com/send?phone=5548999715087&text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento."  target="_blank" class="btn btn-secondary"><img src="/img/whatsapp-icon.svg" alt="">ou converse no whatsapp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="a-chavlar">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-5">
+        <h2>A Chavar</h2>
+        <p>A Chavlar foi fundada em 1993 pelo técnico Alexandre Thomaz. É um ambiente familiar, que possui funcionários experientes e empenhados para atender sua casa, sua empresa e seu carro – seja ele nacional ou importado – a qualquer hora e lugar.</p>
+        <p>Contamos com serviços diferenciados, atendemos 24 horas e atuamos na venda e instalação de fechaduras tetra, interna e externa, cadeados, kit de segurança e, também, em controles para portões e alarmes.</p>
+      </div>
+      <div class="offset-md-1 col-md-6">
+        <img src="/img/foto-chavlar.jpg" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="endereco" class="informations">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-1">
+        <div class="informations-content">
+          <h2>Endereço</h2>
+          <p><span class="bold">Rua Virgilino Ferreira de Souza, nº 01</span> Barreiros, São José, SC</p>
+          <!-- <a href="http://maps.google.com/?saddr=Current%20Location&daddr=Chavlar+-+Rua+Virgilino+Ferreira+de+Souza+-+Barreiros,+São+José+-+SC" target="_blank">COMO CHEGAR</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="map">
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDvWEJ9u0w4TpUkCuTNiJ-lRI75FlfTVsw'></script>
+    <div class="gmap-container">
+      <div id='gmap_canvas'></div>
+      <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+    </div>
+    <script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(-27.5707676,-48.6085743),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-27.5707676,-48.6085743)});infowindow = new google.maps.InfoWindow({content:'<strong>Chaveiro Chavlar</strong><br>Rua Virgilino Ferreira de Souza, nº 01<br> Barreiros, São José, SC'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+  </div>
+</section>
