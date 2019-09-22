@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/chavlar/public_html/teste/
-    - /bin/cp -r /_site/ $DEPLOYPATH
+    - /bin/cp /_site/ $DEPLOYPATH
