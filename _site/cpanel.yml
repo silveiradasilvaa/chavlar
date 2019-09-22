@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home2/chavlar/public_html/
-    - /bin/cp -r /_site/* $DEPLOYPATH
